@@ -56,8 +56,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
   # TDD
-  gem 'factory_bot_rails'
-  gem 'faker'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 2.22'
   gem 'rspec-rails', '~> 6.0.0.rc1'
 end
 
@@ -74,7 +74,9 @@ end
 
 group :test do
   # TDD
-  gem 'capybara'
-  gem 'database_cleaner-active_record'
-  gem 'selenium-webdriver'
+  gem 'capybara', '~> 3.37', '>= 3.37.1'
+  gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.1'
+  gem 'selenium-webdriver', '~> 4.3'
+  gem 'shoulda-matchers', '~> 5.1'
+  gem 'simplecov', '~> 0.21.2', require: false
 end
